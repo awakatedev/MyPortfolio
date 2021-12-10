@@ -1,44 +1,6 @@
 # SRC directory (Structure of frontend)
 
 Here you can see the standard of how Uptly handles its platform using React.js, below you will see a list of standards of use of the library, and how it connects with technologies such as the css pre-processor "sass" to give styles to the platform , Redux to handle state, and the way to create components, folders and the correct handling of JSX within Uptly projects.
-```
-Uptly/src
-|-- README.md
-|-- actions
-|   |-- actionTypes.js
-|   |-- dropDownActions.js
-|   |-- formAction.js
-|   `-- index.js
-|-- assets
-|   |-- static
-|   |   |-- favicon.ico
-|   |   `-- hola.txt
-|   `-- styles
-|       |-- components
-|       |   `-- Header.scss
-|       |-- index.scss
-|       |-- lib
-|       |   |-- mixins.scss
-|       |   |-- placeHolders.scss
-|       |   `-- variables.scss
-|       `-- main.scss
-|-- components
-|   |-- ContactForm.jsx
-|   |-- Dropdown.jsx
-|   `-- Header.jsx
-|-- containers
-|   |-- Contact.jsx
-|   |-- Home.jsx
-|   `-- Portfolio.jsx
-|-- index.js
-|-- reducers
-|   |-- dropDownReducer.js
-|   |-- formReducer.js
-|   `-- index.js
-`-- routes
-    |-- App.jsx
-    `-- Layout.jsx
-```
 
 # Table of content:
 - [Structure of React.js](#structure-of-react.js)
