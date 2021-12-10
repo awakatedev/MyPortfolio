@@ -1,0 +1,8 @@
+@use '../index';
+
+h1{
+  background: index.$Background-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato;  
+}

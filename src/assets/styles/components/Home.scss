@@ -1,0 +1,29 @@
+@use '../index';
+
+.hero{
+  @include index.M-hero-box(100%);
+h1{
+  line-height: index.$Title-height;
+  font-weight: index.$Big-title-weight;
+  background: index.$Background-gradient;
+  -webkit-background-clip: text;
+  color: transparent;  
+
+}
+h2{
+  line-height: index.$Title-height;
+  color: index.$Base-dark;
+  font-weight: index.$Small-title-weight;
+  }
+p{
+  line-height: index.$P-height;
+  color: index.$Text-light;
+  font-weight: index.$Big-p-weight;
+  font-size: index.$Big-p-size;
+  margin-right: 10px;
+  }
+}
+
+@include index.respond-to(900px) {
+  
+}

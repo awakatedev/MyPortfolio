@@ -1,0 +1,39 @@
+@use '../index'; 
+
+.header{
+  display: none;
+  position: fixed;
+}
+
+@include index.respond-to(900px){
+.header{
+  display: block;
+  position: fixed;
+  margin: 1% 0 1% 1%;
+  width: 180px;
+  height: 95vh;
+  border-radius: 10px;
+  background: index.$Grey-light;
+  .header--container{
+    @include index.align(center);
+      .header--logo{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      }
+  ul{
+   margin: 5% 0 10px 0;
+   list-style: none;
+   li{
+     text-decoration: none;
+     color: index.$Text-dark;
+     span{
+       margin-left: 10px;
+          }
+        }
+    }
+  }
+}
+
+}
+
