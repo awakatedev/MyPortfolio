@@ -5,28 +5,28 @@ import navRoutes from './RoutesNav';
 import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    console.count("Header");
-    const currentTheme = localStorage.getItem("Theme");
+    console.count('Header');
+    const currentTheme = localStorage.getItem('Theme');
     if (currentTheme) {
       setTheme(currentTheme);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("Theme", theme);
+    localStorage.setItem('Theme', theme);
     document.body.className = theme;
   }, [theme]);
 
   const handleClick = async () => {
-    if (theme === "light") {
-      setTheme("dark");
+    if (theme === 'light') {
+      setTheme('dark');
     } else {
-      setTheme("light");
+      setTheme('light');
     }
-    localStorage.setItem("Theme", theme);
+    localStorage.setItem('Theme', theme);
     document.body.className = await theme;
   };
 
@@ -66,7 +66,9 @@ const Header = () => {
           </div>
         </section>
       </header>
-      <button className="menu"><Icon icon="mdi-light:chevron-right" /></button>
+      <button className="menu">
+        <Icon icon="mdi-light:chevron-right" />
+      </button>
     </>
   );
 };
