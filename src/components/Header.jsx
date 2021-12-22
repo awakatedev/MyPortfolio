@@ -5,21 +5,29 @@ import navRoutes from './RoutesNav';
 import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState("light");
 
-  useEffect = () => {
-    const currentTheme = localStorage.getItem('Theme');
+  useEffect(() => {
+    console.count("Header");
+    const currentTheme = localStorage.getItem("Theme");
     if (currentTheme) {
       setTheme(currentTheme);
     }
-  };
+  }, []);
 
-  let themeColor = 'light';
-  // document.body.className=(themeColor);
-  const handleClick = (themeColor) => {
-    setTheme(themeColor);
-    localStorage.setItem('Theme', themeColor);
-    document.body.className = themeColor;
+  useEffect(() => {
+    localStorage.setItem("Theme", theme);
+    document.body.className = theme;
+  }, [theme]);
+
+  const handleClick = async () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+    localStorage.setItem("Theme", theme);
+    document.body.className = await theme;
   };
 
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
@@ -49,20 +57,16 @@ const Header = () => {
           </nav>
           <div className="header--themeSwitch">
             <button
-              onClick={() =>
-                handleClick(
-                  themeColor === 'light'
-                    ? (themeColor = 'dark')
-                    : (themeColor = 'light'),
-                )
-              }
+              onClick={() => {
+                handleClick();
+              }}
             >
               <Icon icon="mdi-light:lightbulb" /> theme
             </button>
           </div>
         </section>
       </header>
-      <button></button>
+      <button className="menu"><Icon icon="mdi-light:chevron-right" /></button>
     </>
   );
 };
