@@ -1,7 +1,7 @@
-import '../assets/styles/main.scss';
+import '../assets/styles/components/Portfolio.scss';
 
 const Portfolio = () => {
-  return <h3>Portfolio</h3>;
+  return <h3 className="portfolio">Portfolio</h3>;
 };
 
 export default Portfolio;

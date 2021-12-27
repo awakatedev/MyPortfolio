@@ -13,15 +13,17 @@
   align-items: $align;
   flex-direction: column;
   padding: 10px 0 10px 0;
+  text-align: $align;
 
 }
-//**Mixins to: mobile**//
 
-@mixin M-hero-box($width) {
-  width: $width;
-  margin: 0;
-  padding: 10vh 5vw 0 4vw;
+@mixin Container-box($padding) {
+  width: 100%;
+  padding: $padding;
   border: none;
   box-sizing: border-box;
   overflow: hidden;
-} 
+}
+//**Mixins to: mobile**//
+//**Mixins to: desktop**//
+

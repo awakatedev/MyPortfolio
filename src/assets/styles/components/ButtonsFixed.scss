@@ -1,0 +1,19 @@
+@use '../index';
+
+.buttonsFixed{
+  position: absolute;
+  right: 15vw;
+  top: 3vh;
+  @include index.align(center);
+}
+
+@include index.respond-to(900px){
+  .buttonsFixed{
+  position: absolute;
+  right: 5vw;
+  top: 2vh;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  }
+}

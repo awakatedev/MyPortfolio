@@ -1,20 +1,15 @@
+import '../assets/styles/components/Contact.scss';
 import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   return (
     <>
-      <div className="container">
+      <section className="contact">
         <div>
           <h1>Contact</h1>
         </div>
         <ContactForm />
-        <div>
-          <h3>tienes una idea?</h3>
-          <p>nro</p>
-          <p>email que hay que es mala idea colocar directamente</p>
-          <p>logos</p>
-        </div>
-      </div>
+      </section>
     </>
   );
 };

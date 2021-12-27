@@ -2,7 +2,10 @@
 
 
 footer{
-  background: index.$Darkest-dark;
+  display: flex;
+  justify-content: center;
+  background: index.$Darkest-light;
+  padding: 15px;
   height: 30vh;
   width: 100%;
   margin-top: 50vh;

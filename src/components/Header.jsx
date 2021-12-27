@@ -1,4 +1,5 @@
 import '../assets/styles/components/Header.scss';
+import '../assets/styles/components/Menu.scss';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import navRoutes from './RoutesNav';
@@ -31,7 +32,12 @@ const Header = () => {
   };
 
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
-    <NavLink exact="true" key={key} to={path}>
+    <NavLink
+      className={(navData) => (navData.isActive ? 'active' : '')}
+      exact="true"
+      key={key}
+      to={path}
+    >
       <li>
         <Icon icon={icon} />
         <span> {name} </span>

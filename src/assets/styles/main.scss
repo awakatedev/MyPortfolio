@@ -25,6 +25,10 @@ body.dark {
  header{
    background: index.$Grey-dark;
   }
+  .menu{
+    background-color: index.$Grey-dark;
+    color: index.$Base-light;
+  }
  h2{
  color: index.$Base-light;
   }
@@ -34,8 +38,31 @@ body.dark {
   p{
     color: index.$Text-dark;
   }
+  footer{
+    background-color: index.$Darkest-dark;
+  }
 }
-
+//animation bgTitle
+h1{
+  line-height: index.$Title-height;
+  font-weight: index.$Big-title-weight;
+  background-image: linear-gradient(270deg, #31ABC6, #FC61A2, #BC3EC7, #505488);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+animation: bgTitle 6s infinite;
+}
+@keyframes bgTitle{
+0%{
+  background-position: 0% 50%;
+  }
+  50%{
+ background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+  }
 //Fonts (global)
 h1{
 font-size: index.$H1-size;
@@ -63,4 +90,8 @@ font-size: index.$Desk-h3-size;
 h4{
 font-size: index.$Desk-h4-size;
   }
+p{
+  font-size: index.$Desk-smallP-size;
+  }
+
 }

@@ -1,0 +1,32 @@
+@use '../index';
+
+.menu{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  left: 4vw;
+
+  top: 3vh;
+  background-color: index.$Grey-light;
+  border: none;
+  border-radius: 5px;
+}
+@include index.respond-to(900px){
+  .menu{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  font-size: 35px;
+  left: 17vw;
+  top: 2vh;
+  border: none;
+  border-radius: 5px;
+  }
+}
