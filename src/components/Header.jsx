@@ -7,9 +7,10 @@ import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
+  const [menu, setMenu]  = useState("");
 
   useEffect(() => {
-    console.count('Header');
+   // console.count('Header');
     const currentTheme = localStorage.getItem('Theme');
     if (currentTheme) {
       setTheme(currentTheme);
@@ -31,6 +32,14 @@ const Header = () => {
     document.body.className = await theme;
   };
 
+   const handleMenu = () => {
+   if (menu === "") {
+     setMenu('active')
+    } else {
+     setMenu('')
+      }
+    };
+
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
       className={(navData) => (navData.isActive ? 'active' : '')}
@@ -47,11 +56,11 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
+      <header className={`header ${menu}`}>
         <section className="header--container">
-          <div className="header--logo">
+          <div className="logo">
             <Icon icon="noto:avocado" />
-            <p>Awakate.dev</p>
+            <span>Awakate.dev</span>
           </div>
           <nav className="header--navBar">
             <ul>{navigationList}</ul>
@@ -72,7 +81,12 @@ const Header = () => {
           </div>
         </section>
       </header>
-      <button className="menu">
+      <button
+        className={`menu ${menu}`}
+        onClick={ () => {
+          handleMenu();
+        }}
+      >
         <Icon icon="mdi-light:chevron-right" />
       </button>
     </>

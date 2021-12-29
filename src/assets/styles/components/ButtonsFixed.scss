@@ -2,10 +2,37 @@
 
 .buttonsFixed{
   position: absolute;
-  right: 15vw;
+  display: flex;
+  align-items: flex-end;
+  right: 5vw;
   top: 3vh;
-  @include index.align(center);
-}
+  gap: 10px;
+  }
+  .curriculum{
+   background: transparent;
+   color: index.$Base-dark;
+   width: 30vw;
+   max-width: 150px;
+   height: 40px;
+   border: 1.5px solid index.$Base-dark;
+   border-radius: 10px;
+  }
+  .gitHub{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   width: 40px;
+   height: 40px;
+   border: 1.5px solid index.$Base-dark;
+   border-radius: 10px;
+   color: index.$Base-dark;
+    svg{
+     font-size: index.$H3-size;
+    }
+   }
+  
+
 
 @include index.respond-to(900px){
   .buttonsFixed{
