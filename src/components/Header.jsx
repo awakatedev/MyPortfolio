@@ -7,10 +7,10 @@ import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
-  const [menu, setMenu]  = useState("");
+  const [menu, setMenu] = useState('');
 
   useEffect(() => {
-   // console.count('Header');
+    // console.count('Header');
     const currentTheme = localStorage.getItem('Theme');
     if (currentTheme) {
       setTheme(currentTheme);
@@ -32,13 +32,13 @@ const Header = () => {
     document.body.className = await theme;
   };
 
-   const handleMenu = () => {
-   if (menu === "") {
-     setMenu('active')
+  const handleMenu = () => {
+    if (menu === '') {
+      setMenu('active');
     } else {
-     setMenu('')
-      }
-    };
+      setMenu('');
+    }
+  };
 
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
@@ -83,7 +83,7 @@ const Header = () => {
       </header>
       <button
         className={`menu ${menu}`}
-        onClick={ () => {
+        onClick={() => {
           handleMenu();
         }}
       >
