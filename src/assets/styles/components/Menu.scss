@@ -3,17 +3,20 @@
 .menu{
   position: absolute;
   display: flex;
+  outline: none;
   justify-content: center;
   align-items: center;
   height: 40px;
   width: 40px;
   font-size: 30px;
   left: 4vw;
-
   top: 3vh;
   background-color: index.$Grey-light;
   border: none;
   border-radius: 5px;
+}
+.menu:hover{
+   background-color: index.$Darkest-light;
 }
  .menu.active{
    position: fixed;
@@ -22,16 +25,25 @@
 }
 @include index.respond-to(900px){
   .menu{
-  position: absolute;
+  position: fixed;
   display: flex;
+  outline: none;
   justify-content: center;
   align-items: center;
   height: 45px;
   width: 45px;
   font-size: 35px;
-  left: 17vw;
+  left: 8vw;
   top: 2vh;
   border: none;
   border-radius: 5px;
+  }
+  .menu:hover{
+    background-color: index.$Darkest-light;
+  }
+  .menu.active{
+    position: abosolute;
+    left: 17vw;
+    z-index: 100;
   }
 }

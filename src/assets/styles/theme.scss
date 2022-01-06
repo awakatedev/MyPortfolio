@@ -1,0 +1,110 @@
+@use './index';
+
+body.light {
+  background: index.$Base-light;
+   header{
+   background: index.$Grey-light;
+   .light{
+    background-color: index.$Darkest-light;
+    color: index.$Base-dark;
+    }
+    
+    li:hover{
+    svg{
+      color: index.$Base-dark;
+      }
+    span{
+      color: index.$Base-dark;
+      }
+    }
+  }
+  header.active{
+    background: index.$Grey-light;
+    .light{
+      background-color: index.$Darkest-light;
+      color: index.$Base-dark;
+     }
+  }
+  
+  .menu{
+    background-color: index.$Grey-light;
+    color: index.$Base-dark;
+  }
+  .btn{
+    border: 1.5px solid index.$Base-dark;
+    color: index.$Base-dark;
+    a{
+    color: index.$Base-dark;
+    }
+  }
+
+  h2{
+    color: index.$Base-dark;
+  }
+  h3{
+    color: index.$Base-dark;
+  }
+  h4{
+    color: index.$Base-dark;
+  }
+  p{
+    color: index.$Text-light;
+  }
+  footer{
+    background-color: index.$Darkest-light;
+  }
+}
+
+body.dark {
+ background: index.$Base-dark;
+  header{
+   background: index.$Grey-dark;
+   .dark{
+     background-color: index.$Darkest-dark;
+     color: index.$Base-light;
+    }
+    li:hover{
+      svg{
+      color: index.$Base-light;
+        }
+      span{
+        color: index.$Base-light;
+      }
+    }
+  }
+  header.active{
+    background: index.$Grey-dark;
+    .dark{
+      background: index.$Darkest-dark;
+      color: index.$Base-light;
+    }
+    button{
+      background: index.$Darkest-dark;
+    }
+  }
+
+  .menu{
+    background-color: index.$Grey-dark;
+    color: index.$Base-light;
+  }
+  .btn{
+      border: 1.5px solid index.$Base-light;
+      color: index.$Base-light;
+    a{
+      color: index.$Base-light;
+    }
+  }
+
+  h2{
+    color: index.$Base-light;
+  }
+  h3{
+    color: index.$Base-light;
+  }
+  p{
+    color: index.$Text-dark;
+  }
+  footer{
+    background-color: index.$Darkest-dark;
+  }
+}

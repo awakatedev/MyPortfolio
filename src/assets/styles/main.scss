@@ -14,43 +14,15 @@ html {
 }
 //Theme and layout structure
 body {
+  display: block;
   width: 100%;
  // height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
-  background: index.$Base-light;
 }
-body.dark {
- background: index.$Base-dark;
- header{
-   background: index.$Grey-dark;
-  }
-  header.active{
-    background: index.$Grey-dark;
-  }
-  .menu{
-    background-color: index.$Grey-dark;
-    color: index.$Base-light;
-  }
-  .btn{
-    border: 1.5px solid index.$Base-light;
-    color: index.$Base-light;
-    a{
-    color: index.$Base-light;
-    }
-  }
- h2{
- color: index.$Base-light;
-  }
-  h3{
-  color: index.$Base-light;
-  }
-  p{
-    color: index.$Text-dark;
-  }
-  footer{
-    background-color: index.$Darkest-dark;
-  }
+
+hr{
+  width: 100%;
 }
 
 //animation bgTitle
@@ -61,7 +33,7 @@ h1{
   background-size: 400%;
   -webkit-background-clip: text;
   color: transparent;
-animation: bgTitle 6s infinite;
+  animation: bgTitle 6s infinite;
 }
 @keyframes bgTitle{
 0%{
@@ -73,7 +45,8 @@ animation: bgTitle 6s infinite;
   100%{
     background-position: 0% 50%;
   }
-  }
+}
+
 //Fonts (global)
 h1{
 font-size: index.$H1-size;

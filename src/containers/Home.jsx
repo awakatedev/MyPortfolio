@@ -7,9 +7,9 @@ const Home = () => (
       <h1>I am Jhonathan</h1>
       <h2>Web Developer</h2>
       <p>
-        I am more than html and css, I am passionate about learning and building
+        I'm more than HTML and CSS, I'm passionate about learning and building
         incredible software.
-        <br /> to know more about me, take a look at what I can do!
+        <br /> To find out more about me, take a look at what I can do!
       </p>
     </section>
     <Portfolio />
