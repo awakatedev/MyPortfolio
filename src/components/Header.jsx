@@ -42,10 +42,13 @@ const Header = () => {
 
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
-      className={(navData) => (navData.isActive ? 'active' : '')}
+      className={(navData) => (navData.isActive ? `active ${theme}` : '')}
       exact="true"
       key={key}
       to={path}
+      onClick={() => {
+        menu === 'active' ? handleMenu() : false;
+      }}
     >
       <li>
         <Icon icon={icon} />
@@ -65,20 +68,21 @@ const Header = () => {
           <nav className="header--navBar">
             <ul>{navigationList}</ul>
 
-            <button>
-              <Icon icon="mdi-light:book-multiple" /> Blog{' '}
-              <Icon icon="mdi-light:chevron-down" />
+            <hr />
+            <button className={`blog ${theme}`}>
+              <Icon icon="mdi-light:book-multiple" /> <span>Blog</span>
+              <Icon className="angle-down" icon="mdi-light:chevron-down" />
             </button>
           </nav>
-          <div className="header--themeSwitch">
-            <button
-              onClick={() => {
-                handleClick();
-              }}
-            >
-              <Icon icon="mdi-light:lightbulb" /> theme
-            </button>
-          </div>
+
+          <button
+            className={`header--themeSwitch ${theme}`}
+            onClick={() => {
+              handleClick();
+            }}
+          >
+            <Icon icon="mdi-light:lightbulb" /> <span>theme</span>
+          </button>
         </section>
       </header>
       <button

@@ -8,5 +8,9 @@
 @include index.respond-to(900px){
   .portfolio{
   @include index.Container-box(9vh 0 0 17vw);
+
+  }
+  .skeleton{
+    background-color: black;
   }
 }

@@ -8,6 +8,11 @@ const Footer = () => {
         <Icon icon="noto:avocado" />
         <span>Awakate.dev</span>
       </div>
+      <div className="socialMedia">
+        <Icon icon="akar-icons:linkedin-fill" />
+        <Icon icon="akar-icons:instagram-fill" />
+        <Icon icon="ant-design:twitter-circle-filled" />
+      </div>
     </footer>
   );
 };
