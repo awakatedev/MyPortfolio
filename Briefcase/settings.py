@@ -26,6 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 ALLOWED_HOSTS = []
 
 
@@ -92,6 +93,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # DATABASES = {
 #     'default': dj_database_url.config(
