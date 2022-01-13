@@ -3,4 +3,3 @@ djangorestframework==3.13.1
 Pillow==8.4.0
 django-cors-headers==3.10.1
 python-decouple==3.5
-
