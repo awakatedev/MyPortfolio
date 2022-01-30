@@ -30,13 +30,24 @@ body.light {
     background-color: index.$Grey-light;
     color: index.$Base-dark;
   }
-  .btn{
+   .skeleton{
+    background-color: index.$Darkest-light;
+    .skeleton-wrapped{
+      background-color: index.$Darkest-light;
+    }
+  }
+ .btn{
     border: 1.5px solid index.$Base-dark;
     color: index.$Base-dark;
     a{
     color: index.$Base-dark;
     }
   }
+  .btn:hover{
+    border: none;
+    color: index.$Base-light;
+  }  
+  
 
   h2{
     color: index.$Base-dark;
@@ -82,6 +93,12 @@ body.dark {
       background: index.$Darkest-dark;
     }
   }
+  .skeleton{
+    background-color: index.$Darkest-dark;
+    .skeleton-wrapped{
+      background-color: index.$Darkest-dark;
+    }
+  }
 
   .menu{
     background-color: index.$Grey-dark;
@@ -93,6 +110,9 @@ body.dark {
     a{
       color: index.$Base-light;
     }
+  }
+  .btn:hover{
+    border: none;
   }
 
   h2{

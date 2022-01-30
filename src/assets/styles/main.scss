@@ -35,6 +35,12 @@ h1{
   color: transparent;
   animation: bgTitle 6s infinite;
 }
+.btn__hover:hover{
+ background-image: linear-gradient(270deg, #31ABC6, #FC61A2, #BC3EC7, #505488);
+ background-size: 400%;
+ animation: bgTitle 6s infinite;
+}
+
 @keyframes bgTitle{
 0%{
   background-position: 0% 50%;

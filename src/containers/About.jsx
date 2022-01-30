@@ -1,10 +1,6 @@
 import '../assets/styles/components/About.scss';
-import { useSelector } from 'react-redux';
 
 const About = () => {
-  const dropDownState = useSelector(
-    (state) => state.dropDownReducer.dropDownState.label,
-  );
   return (
     <>
       <section className="about">

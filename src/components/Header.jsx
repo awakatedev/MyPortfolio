@@ -1,5 +1,5 @@
 import '../assets/styles/components/Header.scss';
-import '../assets/styles/components/Menu.scss';
+import Menu from '../components/Menu';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import navRoutes from './RoutesNav';
@@ -7,10 +7,8 @@ import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
-  const [menu, setMenu] = useState('');
 
   useEffect(() => {
-    // console.count('Header');
     const currentTheme = localStorage.getItem('Theme');
     if (currentTheme) {
       setTheme(currentTheme);
@@ -32,14 +30,6 @@ const Header = () => {
     document.body.className = await theme;
   };
 
-  const handleMenu = () => {
-    if (menu === '') {
-      setMenu('active');
-    } else {
-      setMenu('');
-    }
-  };
-
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
       className={(navData) => (navData.isActive ? `active ${theme}` : '')}
@@ -59,7 +49,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`header ${menu}`}>
+      <header className="header">
         <section className="header--container">
           <div className="logo">
             <Icon icon="noto:avocado" />
@@ -76,7 +66,7 @@ const Header = () => {
           </nav>
 
           <button
-            className={`header--themeSwitch ${theme}`}
+            className={`header--themeSwitch btn__hover ${theme}`}
             onClick={() => {
               handleClick();
             }}
@@ -85,14 +75,7 @@ const Header = () => {
           </button>
         </section>
       </header>
-      <button
-        className={`menu ${menu}`}
-        onClick={() => {
-          handleMenu();
-        }}
-      >
-        <Icon icon="mdi-light:chevron-right" />
-      </button>
+      <Menu />
     </>
   );
 };

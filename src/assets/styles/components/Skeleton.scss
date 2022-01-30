@@ -1,0 +1,31 @@
+@use '../index';
+.skeleton{
+position: relative;
+border-radius: 5px;
+}
+.skeleton-wrapped{
+position: absolute;
+}
+/*.skeleton.title{
+   
+}
+.skeleton.text{
+ 
+}*/
+.skeleton.card{
+  height: 100%;
+  width: 80%;
+}
+
+/*@include index.respond-to(900px){
+.skeleton.title{
+   
+}
+.skeleton.text{
+ 
+}
+.skeleton.card{
+  
+}
+
+}*/
