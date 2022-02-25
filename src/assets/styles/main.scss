@@ -12,17 +12,26 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-//Theme and layout structure
+//Layout structure
 body {
   display: block;
   width: 100%;
  // height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
+  transition: all 1s;
 }
-
+main{
+  transition: all 0.5s;
+}
 hr{
   width: 100%;
+}
+input{
+  outline: none;
+}
+textarea{
+  outline: none;
 }
 
 //animation bgTitle
@@ -38,7 +47,10 @@ h1{
 .btn__hover:hover{
  background-image: linear-gradient(270deg, #31ABC6, #FC61A2, #BC3EC7, #505488);
  background-size: 400%;
+ border: none;
+ color: index.$Base-light;
  animation: bgTitle 6s infinite;
+ transition: all 1s;
 }
 
 @keyframes bgTitle{
@@ -66,8 +78,19 @@ font-size: index.$H3-size;
 h4{
 font-size: index.$H4-size;
 }
+p{
+  font-size: index.$Small-p-size;
+}
+i{
+  font-size: index.$I-size;
+}
 
+// Desktop styles
 @include index.respond-to(900px){
+
+main.space{
+  margin-left: 10vw;
+  }
 h1{
 font-size: index.$Desk-h1-size;
   }

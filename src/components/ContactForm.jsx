@@ -1,20 +1,32 @@
+import '../assets/styles/components/Contact.scss';
+
 const ContactForm = () => {
   return (
     <>
-      <form>
-        <label htmlFor="InputName">
-          <input name="name" id="InputName" type="text" placeholder="name" />
-        </label>
-        <label htmlFor="inputEmail">
-          <input
-            name="email"
-            id="inputEmail"
-            type="email"
-            placeholder="Email"
-          />
-        </label>
+      <form className="contactForm">
+        <div className="contactForm--pair">
+          <label htmlFor="InputName">
+            <input
+              className="form--item"
+              name="name"
+              id="InputName"
+              type="text"
+              placeholder="Name"
+            />
+          </label>
+          <label htmlFor="inputEmail">
+            <input
+              className="form--item"
+              name="email"
+              id="inputEmail"
+              type="email"
+              placeholder="Email"
+            />
+          </label>
+        </div>
         <label htmlFor="inputMessage">
           <textarea
+            className="form--item"
             id="inputMessage"
             name="message"
             cols="30"
@@ -22,7 +34,11 @@ const ContactForm = () => {
             placeholder="Message"
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input
+          className="btn--submit btn__hover"
+          type="submit"
+          value="Submit"
+        />
       </form>
     </>
   );

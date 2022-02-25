@@ -31,10 +31,13 @@ body.light {
     color: index.$Base-dark;
   }
    .skeleton{
-    background-color: index.$Darkest-light;
-    .skeleton-wrapped{
-      background-color: index.$Darkest-light;
-    }
+    //background-color: index.$Darkest-light;
+    background-image: linear-gradient(
+  90deg,
+  index.$Darkest-light 0%, index.$Darkest-light 40%,
+    index.$Grey-light 50%, index.$Grey-light 55%,
+    index.$Darkest-light 65%, index.$Darkest-light 100%
+    );
   }
  .btn{
     border: 1.5px solid index.$Base-dark;
@@ -47,8 +50,17 @@ body.light {
     border: none;
     color: index.$Base-light;
   }  
-  
-
+  .form--item{
+    background-color: index.$Grey-light;
+  } 
+  .btn--submit{
+    border: solid 1.5px index.$Base-dark;
+    .btn--submit:hover{
+      border: none;
+      color: index.$Base-light;
+    }
+    color: index.$Base-dark;
+  }
   h2{
     color: index.$Base-dark;
   }
@@ -63,6 +75,17 @@ body.light {
   }
   footer{
     background-color: index.$Darkest-light;
+    .socialMedia{
+      &--icon{
+       color: index.$Darkest-dark;
+        }
+      &--icon:hover{
+        color: index.$Base-dark;
+      }
+    }
+    .rights{
+      color: index.$Text-light;
+    }
   }
 }
 
@@ -94,10 +117,12 @@ body.dark {
     }
   }
   .skeleton{
-    background-color: index.$Darkest-dark;
-    .skeleton-wrapped{
-      background-color: index.$Darkest-dark;
-    }
+    background-image: linear-gradient(
+  90deg,
+  index.$Darkest-dark 0%, index.$Darkest-dark 40%,
+    index.$Grey-dark 50%, index.$Grey-dark 55%,
+    index.$Darkest-dark 65%, index.$Darkest-dark 100%
+    );
   }
 
   .menu{
@@ -114,6 +139,13 @@ body.dark {
   .btn:hover{
     border: none;
   }
+  .form--item{
+    background-color: index.$Grey-dark;
+  }
+  .btn--submit{
+    border: solid 1.5px index.$Base-light;
+    color: index.$Base-light;
+  }
 
   h2{
     color: index.$Base-light;
@@ -126,5 +158,16 @@ body.dark {
   }
   footer{
     background-color: index.$Darkest-dark;
+    .socialMedia{
+      &--icon{
+        color: index.$Darkest-light;
+      }
+      &--icon:hover{
+        color: index.$Base-light;
+      }
+      }
+      .rights{
+        color: index.$Text-dark;
+      }
   }
 }

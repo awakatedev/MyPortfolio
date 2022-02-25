@@ -1,10 +1,13 @@
 @use '../index';
 .skeleton{
-position: relative;
 border-radius: 5px;
+overflow: hidden;
+background-size: 400%;
+animation: shimer 1500ms infinite;
 }
-.skeleton-wrapped{
-position: absolute;
+@keyframes shimer {
+  from{background-position: 100% 100%;}
+  to{background-position: 0 0;}
 }
 /*.skeleton.title{
    
@@ -14,7 +17,8 @@ position: absolute;
 }*/
 .skeleton.card{
   height: 100%;
-  width: 80%;
+  width: 100%;
+ // max-height: 400px;
 }
 
 /*@include index.respond-to(900px){

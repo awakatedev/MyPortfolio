@@ -30,6 +30,10 @@ const Header = () => {
     document.body.className = await theme;
   };
 
+  const menuState = document.querySelector('.menu');
+  const mainState = document.querySelector('main');
+  const navState = document.querySelector('.header');
+
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
       className={(navData) => (navData.isActive ? `active ${theme}` : '')}
@@ -37,7 +41,11 @@ const Header = () => {
       key={key}
       to={path}
       onClick={() => {
-        menu === 'active' ? handleMenu() : false;
+        if (true) {
+          navState.classList.remove('active');
+          menuState.classList.remove('active');
+          mainState.classList.remove('space');
+        }
       }}
     >
       <li>
@@ -59,7 +67,14 @@ const Header = () => {
             <ul>{navigationList}</ul>
 
             <hr />
-            <button className={`blog ${theme}`}>
+            <button
+              className={`blog btn__hover ${theme}`}
+              onClick={() => {
+                alert(
+                  'Sorry, this functionality is under development, will be ready in soon ;)',
+                );
+              }}
+            >
               <Icon icon="mdi-light:book-multiple" /> <span>Blog</span>
               <Icon className="angle-down" icon="mdi-light:chevron-down" />
             </button>

@@ -2,10 +2,6 @@ import '../assets/styles/components/Skeleton.scss';
 const Skeleton = ({ type }) => {
   const classes = `skeleton ${type}`;
 
-  return (
-    <div className={classes}>
-      <div className="skeleton-wrapped"></div>
-    </div>
-  );
+  return <div className={classes}></div>;
 };
 export default Skeleton;

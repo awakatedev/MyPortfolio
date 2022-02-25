@@ -14,7 +14,7 @@ p{
 
 @include index.respond-to(900px) {
 .about{
-  @include index.Container-box(20vh 4vw 0 17vw );
+  @include index.Container-box(20vh 4vw 0 12vw );
   }
 }
 

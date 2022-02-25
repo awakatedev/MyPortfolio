@@ -17,7 +17,7 @@ const Portfolio = () => {
 
   const loader = () => {
     return (
-      <section className="portfolio">
+      <section className="portfolio content">
         <h3>Portfolio</h3>
         <div className="projects">
           <Skeleton type="card" />
