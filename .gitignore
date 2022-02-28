@@ -1,5 +1,9 @@
 # Build
 node_modules
+/src
+/public
+package.json
+webpack.config.js
 
 ### Django ###
 *.pyc
