@@ -1,7 +1,7 @@
 # Build
-node_modules
-src
-public
+/node_modules
+/src
+/public
 .babelrc
 .eslintrc.js
 .prettierrc
