@@ -22,5 +22,4 @@ urlpatterns = [
     path('users/', include('apps.users.api.urls')),
     path('home/', include('apps.home.api.urls')),
     path('', TemplateView.as_view(template_name="index.html")),
-
 ]
