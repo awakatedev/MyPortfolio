@@ -19,26 +19,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhscode10/MyPortfolio.git"
+    "url": "git+https://github.com/awakatedev/MyPortfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jhscode10/MyPortfolio/issues"
+    "url": "https://github.com/awakatedev/MyPortfolio/issues"
   },
-  "homepage": "https://github.com/jhscode10/MyPortfolio#readme",
+  "homepage": "https://github.com/awakatedev/MyPortfolio#readme",
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-loading-skeleton": "^3.0.2",
-    "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "react-select": "^5.2.1",
-    "redux": "^4.1.2"
+    "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

@@ -1,32 +1,42 @@
 import '../assets/styles/components/Portfolio.scss';
 import { useState, useEffect } from 'react';
-import Skeleton from 'react-loading-skeleton';
+import useApiCall from '../hooks/useApiCall';
+import Skeleton from '../loaders/Skeleton';
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
-  // const [data, setData] = useState(false);
+  const { data } = useApiCall('https://api.github.com/users/awakatedev/repos');
+
+  console.log(data);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 8000);
   }, []);
 
   const loader = () => {
     return (
-      //<SkeletonTheme color="red">
-      <div className="portfolio">
+      <section className="portfolio content">
         <h3>Portfolio</h3>
-        <p>Loading...</p>
-      </div>
-      // </SkeletonTheme>
+        <div className="projects">
+          <Skeleton type="card" />
+          <Skeleton type="card" />
+          <Skeleton type="card" />
+        </div>
+      </section>
     );
   };
-  if (loading) {
-    return loader();
-  } else {
-    return <h3 className="portfolio">Portfolio</h3>;
-  }
+
+  const projects = () => {
+    return (
+      <div className="portfolio">
+        <h3>Portfolio</h3>
+      </div>
+    );
+  };
+
+  return loading ? loader() : projects();
 };
 
 export default Portfolio;

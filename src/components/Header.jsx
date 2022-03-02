@@ -1,5 +1,5 @@
 import '../assets/styles/components/Header.scss';
-import '../assets/styles/components/Menu.scss';
+import Menu from '../components/Menu';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import navRoutes from './RoutesNav';
@@ -7,10 +7,8 @@ import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
-  const [menu, setMenu] = useState('');
 
   useEffect(() => {
-    // console.count('Header');
     const currentTheme = localStorage.getItem('Theme');
     if (currentTheme) {
       setTheme(currentTheme);
@@ -32,13 +30,9 @@ const Header = () => {
     document.body.className = await theme;
   };
 
-  const handleMenu = () => {
-    if (menu === '') {
-      setMenu('active');
-    } else {
-      setMenu('');
-    }
-  };
+  const menuState = document.querySelector('.menu');
+  const mainState = document.querySelector('main');
+  const navState = document.querySelector('.header');
 
   let navigationList = navRoutes.map(({ path, name, key, icon }) => (
     <NavLink
@@ -47,7 +41,11 @@ const Header = () => {
       key={key}
       to={path}
       onClick={() => {
-        menu === 'active' ? handleMenu() : false;
+        if (true) {
+          navState.classList.remove('active');
+          menuState.classList.remove('active');
+          mainState.classList.remove('space');
+        }
       }}
     >
       <li>
@@ -59,7 +57,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`header ${menu}`}>
+      <header className="header">
         <section className="header--container">
           <div className="logo">
             <Icon icon="noto:avocado" />
@@ -69,14 +67,21 @@ const Header = () => {
             <ul>{navigationList}</ul>
 
             <hr />
-            <button className={`blog ${theme}`}>
+            <button
+              className={`blog btn__hover ${theme}`}
+              onClick={() => {
+                alert(
+                  'Sorry, this functionality is under development, will be ready in soon ;)',
+                );
+              }}
+            >
               <Icon icon="mdi-light:book-multiple" /> <span>Blog</span>
               <Icon className="angle-down" icon="mdi-light:chevron-down" />
             </button>
           </nav>
 
           <button
-            className={`header--themeSwitch ${theme}`}
+            className={`header--themeSwitch btn__hover ${theme}`}
             onClick={() => {
               handleClick();
             }}
@@ -85,14 +90,7 @@ const Header = () => {
           </button>
         </section>
       </header>
-      <button
-        className={`menu ${menu}`}
-        onClick={() => {
-          handleMenu();
-        }}
-      >
-        <Icon icon="mdi-light:chevron-right" />
-      </button>
+      <Menu />
     </>
   );
 };

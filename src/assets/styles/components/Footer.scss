@@ -2,11 +2,10 @@
 
 
 footer{
-  background: index.$Darkest-light;
   padding-top: 15px;
   height: 30vh;
   width: 100%;
-  margin-top: 50vh;
+  margin-top: 20vh;
   .logo{
     margin: 0 auto;
     display: flex;
@@ -26,23 +25,26 @@ footer{
     padding-top: 30px;
     display: flex;
     justify-content: center;
+    gap: 20px;
     align-items: center;
+    &--icon{
+      height: 25px;
+      width: 25px;
+    }
+  }
+  .rights{
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: index.$Small-p-weight;  
   }
 }
 
 @include index.respond-to(900px){
  footer{
-  background: index.$Darkest-light;
-  padding-top: 15px;
   height: 30vh;
   width: 100%;
-  margin-top: 50vh;
   .logo{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     svg{
      font-size: index.$Desk-h3-size;
     }
@@ -52,5 +54,12 @@ footer{
      color: index.$Text-light;
     }
   }
+  .socialMedia{
+    gap: 30px;
+    &--icon{
+      height: 30px;
+      width: 30px;
+      }
+    }
 }
 }

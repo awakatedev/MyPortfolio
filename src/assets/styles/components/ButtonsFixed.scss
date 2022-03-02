@@ -10,11 +10,9 @@
   }
   .curriculum{
    background: transparent;
-   color: index.$Base-dark;
    width: 30vw;
    max-width: 150px;
    height: 40px;
-   border: 1.5px solid index.$Base-dark;
    border-radius: 10px;
   }
   .gitHub{
@@ -24,9 +22,7 @@
    background: transparent;
    width: 40px;
    height: 40px;
-   border: 1.5px solid index.$Base-dark;
    border-radius: 10px;
-   color: index.$Base-dark;
     svg{
      font-size: index.$H3-size;
     }
@@ -44,11 +40,9 @@
   gap: 20px;
     .curriculum{
    background: transparent;
-   color: index.$Base-dark;
    width: 30vw;
    max-width: 150px;
    height: 45px;
-   border: 1.5px solid index.$Base-dark;
    border-radius: 10px;
    font-size: index.$Desk-smallP-size;
   }
@@ -59,9 +53,7 @@
    background: transparent;
    width: 45px;
    height: 45px;
-   border: 1.5px solid index.$Base-dark;
    border-radius: 10px;
-   color: index.$Base-dark;
     svg{
      font-size: index.$Desk-smallP-size;
     }

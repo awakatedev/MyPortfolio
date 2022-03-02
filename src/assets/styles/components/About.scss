@@ -3,15 +3,6 @@
 .about{
   @include index.Container-box(15vh 4vw 0 4vw);
 
-h1{
-  line-height: index.$Title-height;
-  font-weight: index.$Big-title-weight;
-}
-h2{
-  line-height: index.$Title-height;
-  color: index.$Base-dark;
-  font-weight: index.$Small-title-weight;
-  }
 p{
   line-height: index.$P-height;
   color: index.$Text-light;
@@ -23,7 +14,7 @@ p{
 
 @include index.respond-to(900px) {
 .about{
-  @include index.Container-box(20vh 4vw 0 17vw );
+  @include index.Container-box(20vh 4vw 0 12vw );
   }
 }
 

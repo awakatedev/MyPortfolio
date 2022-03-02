@@ -37,6 +37,7 @@
   top: 2vh;
   border: none;
   border-radius: 5px;
+  transition: all 0.3s;
   }
   .menu:hover{
     background-color: index.$Darkest-light;
@@ -45,5 +46,6 @@
     position: abosolute;
     left: 17vw;
     z-index: 100;
+    transition: all 0.3s;
   }
 }
