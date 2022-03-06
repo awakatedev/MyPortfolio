@@ -8,7 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['52.67.180.50', 'awakate.dev', 'www.awakate.dev']
+ALLOWED_HOSTS = ['18.230.34.132', 'awakate.dev', 'www.awakate.dev']
 
 
 
