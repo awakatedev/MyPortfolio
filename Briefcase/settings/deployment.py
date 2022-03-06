@@ -32,17 +32,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'dist'
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
-# CORS_ALLOWED_ORIGINS = [
-#     config('CORS_ALLOWED_ORIGINS_ONE')
-# ]
-
-# CORS_ORIGIN_WHITELIST = [
-#     config('CORS_ALLOWED_ORIGINS_ONE')
-# ]
 
