@@ -9,7 +9,6 @@ import ErrorPage from '../containers/ErrorPage';
 const App = () => {
   return (
     <BrowserRouter>
-      //
       <statusProvider>
         <Layout>
           <Routes>
@@ -20,7 +19,6 @@ const App = () => {
             <Route exact path="*" element={<ErrorPage />} />
           </Routes>
         </Layout>
-        //{' '}
       </statusProvider>
     </BrowserRouter>
   );
