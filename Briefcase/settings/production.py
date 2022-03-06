@@ -8,8 +8,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+ALLOWED_HOSTS = ['52.67.180.50', 'awakate.dev', 'www.awakate.dev']
 
-ALLOWED_HOSTS = []
 
 
 
@@ -26,7 +26,6 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'dist'
