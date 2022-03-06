@@ -6,7 +6,7 @@ def setup_config():
     local.
     """
 
-    if environ['COMPUTERNAME'] in ['DESKTOP-4F07LQG']:
+    if environ['USERNAME'] in ['shainny', '']:
         environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.deployment')
     else:
         environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.production')
