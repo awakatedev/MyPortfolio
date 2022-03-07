@@ -1,24 +1,13 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
- 
+import os
 import sys
-from os import environ
-from decouple import config
 
 
 def main():
     """Run administrative tasks."""
-    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings')
-    # Elije la configuración adecuada para desarrollo o para producción,
-    # utiliza la variable de entorno COMPUTERNAME para decidir si está en el servidor o en 
-    # local.
-
-    if config('DJANGO_AWS_AWAKATE') == 'development':
-        environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.deployment')
-    else:
-        environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.production')
-
-
+    
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
