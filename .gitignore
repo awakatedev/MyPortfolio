@@ -17,3 +17,5 @@ staticfiles
 venv
 .idea
 .env
+
+helper.py

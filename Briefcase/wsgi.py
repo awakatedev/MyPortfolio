@@ -8,9 +8,18 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 from django.core.wsgi import get_wsgi_application
-from Briefcase.settings.helper import setup_config
+from os import environ
+from decouple import config
 
 
-setup_config()
+# Elije la configuración adecuada para desarrollo o para producción,
+# utiliza la variable de entorno COMPUTERNAME para decidir si está en el servidor o en 
+# local.
+
+if config('DJANGO_AWS_AWAKATE') == 'development':
+    environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.deployment')
+else:
+    environ.setdefault('DJANGO_SETTINGS_MODULE', 'Briefcase.settings.production')
+
 
 application = get_wsgi_application()
