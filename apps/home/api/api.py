@@ -6,8 +6,8 @@ from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 
-from apps.home.models import ContactMessage
-from .serializers import ContactMessageSerializer
+from apps.home.models import AnyFile, ContactMessage
+from .serializers import ContactMessageSerializer, AnyFileSerializer
 
 
 def send_email(data):
@@ -46,4 +46,22 @@ class ContactView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AnyFileView(APIView):
+    """
+    Manager files
+    """
+
+    def get(self, request):
+        anyfile = AnyFile.objects.all()
+        serializer = AnyFileSerializer(anyfile, many=True)
+        return Response(serializer.data)
+
+    # def post(self, request):
+    #     serializer = AnyFileSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
