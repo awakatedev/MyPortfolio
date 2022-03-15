@@ -39,6 +39,15 @@ body.light {
     index.$Darkest-light 65%, index.$Darkest-light 100%
     );
   }
+  .project{
+    background-color: index.$Base-light;
+    button{
+      border: solid 1px index.$Base-dark;
+      a{
+        color: index.$Base-dark;
+      }
+    }
+  }
  .btn{
     border: 1.5px solid index.$Base-dark;
     color: index.$Base-dark;
@@ -72,6 +81,9 @@ body.light {
   }
   p{
     color: index.$Text-light;
+  }
+  i{
+    color: index.$Text-dark;
   }
   footer{
     background-color: index.$Darkest-light;
@@ -124,7 +136,15 @@ body.dark {
     index.$Darkest-dark 65%, index.$Darkest-dark 100%
     );
   }
-
+  .project{
+    background-color: index.$Darkest-dark;
+    button{
+      border: solid 1px index.$Base-light;
+      a{
+        color: index.$Base-light;
+      }
+    }
+  }
   .menu{
     background-color: index.$Grey-dark;
     color: index.$Base-light;
@@ -153,8 +173,14 @@ body.dark {
   h3{
     color: index.$Base-light;
   }
+  h4{
+    color: index.$Base-light;
+  }
   p{
     color: index.$Text-dark;
+  }
+  i{
+    color: index.$Text-light;
   }
   footer{
     background-color: index.$Darkest-dark;

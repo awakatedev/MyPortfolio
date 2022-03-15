@@ -79,15 +79,16 @@ const Header = () => {
               <Icon className="angle-down" icon="mdi-light:chevron-down" />
             </button>
           </nav>
-
-          <button
-            className={`header--themeSwitch btn__hover ${theme}`}
-            onClick={() => {
-              handleClick();
-            }}
-          >
-            <Icon icon="mdi-light:lightbulb" /> <span>theme</span>
-          </button>
+          <section className="header--themeSwitch">
+            <button
+              className={`btn__hover ${theme}`}
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              <Icon icon="mdi-light:lightbulb" /> <span>theme</span>
+            </button>
+          </section>
         </section>
       </header>
       <Menu />

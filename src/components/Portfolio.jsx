@@ -1,42 +1,18 @@
 import '../assets/styles/components/Portfolio.scss';
-import { useState, useEffect } from 'react';
-import useApiCall from '../hooks/useApiCall';
-import Skeleton from '../loaders/Skeleton';
+//import { useState, useEffect } from 'react';
+import ProjectCard from './ProjectCard';
+//import Skeleton from '../loaders/Skeleton';
 
 const Portfolio = () => {
-  const [loading, setLoading] = useState(true);
-  const { data } = useApiCall('https://api.github.com/users/awakatedev/repos');
-
-  console.log(data);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(true);
-    }, 8000);
-  }, []);
-
-  const loader = () => {
-    return (
-      <section className="portfolio content">
-        <h3>Portfolio</h3>
-        <div className="projects">
-          <Skeleton type="card" />
-          <Skeleton type="card" />
-          <Skeleton type="card" />
-        </div>
-      </section>
-    );
-  };
-
-  const projects = () => {
-    return (
-      <div className="portfolio">
-        <h3>Portfolio</h3>
+  // const [loading, setLoading] = useState(true);
+  return (
+    <div className="portfolio">
+      <h3>Portfolio</h3>
+      <div className="projects">
+        <ProjectCard />
       </div>
-    );
-  };
-
-  return loading ? loader() : projects();
+    </div>
+  );
 };
 
 export default Portfolio;

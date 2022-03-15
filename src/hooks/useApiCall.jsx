@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react';
 
-const useApiCall = (url) => {
+const useApiCall = (url, Method, authorization) => {
   const [data, setData] = useState({});
 
   useEffect(async () => {
     try {
-      const response = await fetch(url);
-      const statusRes = response.status;
+      const response = await fetch(url, {
+        method: Method,
+        headers: {
+          Authorization: authorization,
+        },
+      });
       const object = await response.json();
-      setData({ statusRes, object });
+      //  console.log(status);
+      setData({ object });
     } catch (err) {
-      setData(null);
+      setData(false);
     }
   }, []);
-  return { data };
+
+  return !data.hasOwnProperty('message') ? { data } : alert('bad');
 };
 export default useApiCall;
