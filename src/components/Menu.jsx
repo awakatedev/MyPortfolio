@@ -30,7 +30,7 @@ const Menu = () => {
         }
       }}
     >
-      {menu === '' ? (
+      {!menu ? (
         <Icon icon="mdi-light:chevron-right" />
       ) : (
         <Icon icon="mdi-light:chevron-left" />

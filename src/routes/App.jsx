@@ -6,20 +6,19 @@ import Contact from '../containers/Contact';
 import Blog from '../containers/Blog';
 import Layout from './Layout';
 import ErrorPage from '../containers/ErrorPage';
+import { Children } from 'react';
 const App = () => {
   return (
     <BrowserRouter>
-      <statusProvider>
-        <Layout>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="About" element={<About />} />
-            <Route exact path="Contact" element={<Contact />} />
-            <Route exact path="Blog" element={<Blog />} />
-            <Route exact path="*" element={<ErrorPage />} />
-          </Routes>
-        </Layout>
-      </statusProvider>
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="About" element={<About />} />
+          <Route exact path="Contact" element={<Contact />} />
+          <Route exact path="Blog" element={<Blog />} />
+          <Route exact path="*" element={<ErrorPage />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 };

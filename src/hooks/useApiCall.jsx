@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 
-const useApiCall = (url, Method, authorization) => {
-  const [data, setData] = useState({});
+const useApiCall = (url, Method) => {
+  const [data, setData] = useState(false);
 
   useEffect(async () => {
     try {
+      const credentials = btoa(
+        'awakatedev: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',
+      );
       const response = await fetch(url, {
         method: Method,
         headers: {
-          Authorization: authorization,
+          Authorization: `Basic ${credentials}`,
         },
       });
       const object = await response.json();
@@ -17,8 +20,8 @@ const useApiCall = (url, Method, authorization) => {
     } catch (err) {
       setData(false);
     }
-  }, []);
+  }, [!data]);
 
-  return !data.hasOwnProperty('message') ? { data } : alert('bad');
+  return !data.hasOwnProperty('message') && { data };
 };
 export default useApiCall;

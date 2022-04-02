@@ -5,7 +5,8 @@ import useSeo from '../hooks/useSeo';
 const Home = () => {
   useSeo({
     title: 'Home',
-    description: 'Check out some of the projects I worked up on my portfolio!',
+    description:
+      'Jhoanthan Hartswing Saldarriaga Gallango. Web-Developer and crypto enthusiastic',
   });
 
   return (

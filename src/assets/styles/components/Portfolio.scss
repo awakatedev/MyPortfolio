@@ -22,13 +22,17 @@
   scroll-snap-align: start;
  }
  .project{
-  // width: 100%;
    background-color: index.$Base-light;
    margin-bottom: 20px;
-   box-shadow: 5px -10px 17px 5px rgba(0, 0, 0, 0.08);
+   box-shadow: 8px 5px 17px 5px rgba(0, 0, 0, 0.04);
   border-radius: 5px;
   overflow: hidden;
   box-sizing: border-box;
+  transition: all .2s ease-in-out;
+  }
+  .project:hover{
+    transition: .2s;
+    transform: scale(0.99, 0.99);
   }
   .project--show{
    height: 45%;
@@ -36,28 +40,88 @@
    box-sizing: border-box;
    background-position: cover;
    img{
+     transition: .2s;
      height: 100%;
      width: 100%;
+    }
+    img:hover{
+    transition: .2s;
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+    transform: scale(1.1);
     }
   }
   .project--data{
     height: 55%;
-    padding: 5%;
+    padding: 5% 5% 3% 5%;
     overflow: hidden;
     box-sizing: border-box;
     p{margin-top: 10px;}
-    button{
-      margin: 14% 0 0 50%;
-      border-radius: 5px;
-      background-color: transparent;
-      text-align: center;
-      height: 40px;
-      width: 150px;
-      a{
-        text-decoration: none;
+     &__top{
+       height: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i{
+        margin-right: 3%;
+        font-size: 20px;
       }
+      }
+      &__middle{
+        height: 55%;
+       display: flex;
+       flex-direction: column;
+       .topicsContainer{
+         display: inline-block;
+         margin: 10px 0 3px 0;
+         i{
+           margin-right: 3%;
+      //  border: 5px solid index.$Grey-light;
+        border-radius: 15%;
+        font-size: 12px;
+     //   background-color: index.$Grey-light;
+        }
+      }
+      }
+      &__bottom{
+        .collabs{
+          border: none;
+         // border-radius: 100%;
+          overflow: hidden;
+          box-sizing: border-box;
+          img{
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 100%;
+          //  background-size: cover;
+           // background-repeat: no-repeat;
+        }
+      }
+        height: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+         border-radius: 5px;
+         background-color: transparent;
+         text-align: center;
+         height: 40px;
+         width: 150px;
+         transition: .2s;
+        a{
+         text-decoration: none;
+        }
+       }
+       button:hover{
+         border: none;
+         a{
+           color: index.$Base-light;
+        }
+      }
+      }    
     }
-  }
   }
 @include index.respond-to(500px){
   .portfolio{

@@ -1,0 +1,46 @@
+@use '../index.scss';
+
+.errorPage{
+  @include index.Container-box(5vh 5vw);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  img{
+    height: 60%;
+    width: 70%;
+  }
+  &--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    p{
+      margin-top: 10px;
+    }
+   button{
+  margin-top: 20px;
+   border-radius: 10px;
+   background: transparent;
+   width: 30vw;
+   max-width: 150px;
+   height: 40px;
+   a{
+     text-decoration: none;
+      }
+    }
+  }
+}
+@include index.respond-to(900px){
+.errorPage{
+  @include index.Container-box(5vh 5vw);
+  img{
+    height: 60%;
+    width: 30%;
+  }
+ }
+}

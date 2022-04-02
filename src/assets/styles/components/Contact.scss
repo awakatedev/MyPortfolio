@@ -2,8 +2,11 @@
 
 .contact{
   @include index.Container-box(20vh 4vw 0 4vw);
+    h1{
+    margin-bottom: 5px;
+  }
   .contactForm{
-  margin-top: 20px;
+  margin-top: 15px;
    display: flex;
    flex-direction: column;
    gap: 10px;

@@ -31,7 +31,7 @@ const ContactForm = () => {
             name="message"
             cols="30"
             rows="10"
-            placeholder="Message"
+            placeholder="Hey Awakate, let's work together!"
           />
         </label>
         <input
