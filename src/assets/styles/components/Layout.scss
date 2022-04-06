@@ -1,17 +1,16 @@
 @use '../index';
-
-
+ 
 .light-blue{
  z-index: -10;
  position: fixed;
- right: -100%;
- top: -70%;
+ right: -90%;
+ top: -60%;
 }
 .light-pink{
 z-index: -10;
 position: fixed;
-left: -110%;
-top: 45vh;
+left: -90%;
+top: 40vh;
 }
 
 @include index.respond-to(900px) {

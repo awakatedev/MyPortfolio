@@ -20,7 +20,7 @@ const ProjectCard = () => {
     object &&
       object.forEach(async (card) => {
         const credentials = btoa(
-          'awakatedev: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',
+          'awakatedev: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',
         );
         const responseImg = await fetch(
           `https://api.github.com/repos/awakatedev/${card.name}/contents/.img/img.jpg`,

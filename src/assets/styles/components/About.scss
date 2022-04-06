@@ -10,11 +10,42 @@ p{
   font-size: index.$Small-p-size;
   margin: 8px 10px 40px 0;
   }
+.tech-specialities{
+  margin: 8px 0 40px 0;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li{
+  font-size: index.$H4-size;
+  line-height: index.$P-height;
+  list-style: none;
+  font-weight: index.$Small-title-weight;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+
+  }
+}
 }
 
 @include index.respond-to(900px) {
 .about{
+    p{
+      font-weight: index.$Small-p-weight;
+      font-size: index.$Desk-smallP-size;
+      width:90%;
+}
   @include index.Container-box(20vh 4vw 0 12vw );
+    .tech-specialities{
+    width: 50%;
+    li{
+      font-size: index.$Desk-bigP-size;
+      font-weight: index.$Big-p-weight;
+      padding: 5px 10px;
+      }
+    }
   }
 }
 

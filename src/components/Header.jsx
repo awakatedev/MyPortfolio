@@ -6,28 +6,22 @@ import navRoutes from './RoutesNav';
 import { Icon, InlineIcon } from '@iconify/react';
 
 const Header = () => {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const currentTheme = localStorage.getItem('Theme');
-    if (currentTheme) {
-      setTheme(currentTheme);
-    }
-  }, []);
+  const currentTheme = localStorage.getItem('Theme');
+  const [theme, setTheme] = useState(currentTheme);
 
   useEffect(() => {
     localStorage.setItem('Theme', theme);
     document.body.className = theme;
   }, [theme]);
 
-  const handleClick = async () => {
+  const handleClick = () => {
     if (theme === 'light') {
       setTheme('dark');
     } else {
       setTheme('light');
     }
     localStorage.setItem('Theme', theme);
-    document.body.className = await theme;
+    document.body.className = theme;
   };
 
   const menuState = document.querySelector('.menu');

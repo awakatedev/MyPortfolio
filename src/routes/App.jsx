@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 //import statusProvider from '../context/menuContext';
+import { useState, useEffect } from 'react';
 import Home from '../containers/Home';
 import About from '../containers/About';
 import Contact from '../containers/Contact';
 import Blog from '../containers/Blog';
 import Layout from './Layout';
 import ErrorPage from '../containers/ErrorPage';
-import { Children } from 'react';
+
 const App = () => {
   return (
     <BrowserRouter>

@@ -32,13 +32,20 @@ const About = () => {
             E-comerce websites and small practice projects.
           </p>
           <h2>Specialities</h2>
-          <ul>
-            <li>React.js</li>
-            <li>SASS</li>
-            <li>ES6+</li>
-            <li>AWS</li>
-            <li>Linux</li>
-          </ul>
+          <div className="tech-specialities">
+            <ul>
+              <li>React.js</li>
+              <li>SASS</li>
+            </ul>
+            <ul>
+              <li>HTML5/SEO</li>
+              <li>ES6+</li>
+            </ul>
+            <ul>
+              <li>AWS</li>
+              <li>Linux</li>
+            </ul>
+          </div>
           <h2>Trajectory</h2>
           <p>
             I plan to enrich my front-end knowledge and give users excellence

@@ -1,14 +1,56 @@
 @use './index';
-
+//LIGHT STYLES
 body.light {
-  background: index.$Base-light;
+background-color: index.$Base-light;
+  .loading{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+justify-content: center;
+  align-items: center;
+.loading-pulse {
+  position: relative;
+  width: (24px / 4);
+  height: 24px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(index.$Grey-dark, 0.2);
+  animation: pulseLight 950ms infinite;
+  animation-delay: (950ms / 3);
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    height: (24px / 1.5);
+    width: (24px / 4);
+    background: rgba(index.$Grey-dark, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulseLight 950ms infinite;
+  }
+  &:before {
+    left: -(24px / 2);
+  }
+  &:after {
+    left: (24px / 2);
+    animation-delay: (950ms / 1.5);
+  }
+ }
+}
+  @keyframes pulseLight {	
+  50% {
+    background: index.$Text-light;
+  }
+}
+
    header{
    background: index.$Grey-light;
    .light{
     background-color: index.$Darkest-light;
     color: index.$Base-dark;
-    }
-    
+    }   
     li:hover{
     svg{
       color: index.$Base-dark;
@@ -85,20 +127,13 @@ body.light {
     }
     color: index.$Base-dark;
   }
-  h2{
-    color: index.$Base-dark;
-  }
-  h3{
-    color: index.$Base-dark;
-  }
-  h4{
-    color: index.$Base-dark;
-  }
-  p{
-    color: index.$Text-light;
-  }
-  i{
-    color: index.$Text-dark;
+  .about{
+    .tech-specialities{
+      li{
+        background-color: index.$Grey-light;
+        color: index.$Text-light;
+      }
+    }
   }
   footer{
     background-color: index.$Darkest-light;
@@ -114,10 +149,73 @@ body.light {
       color: index.$Text-light;
     }
   }
+  //GENERAL LIGHT
+  h2{
+    color: index.$Base-dark;
+  }
+  h3{
+    color: index.$Base-dark;
+  }
+  h4{
+    color: index.$Base-dark;
+  }
+  p{
+    color: index.$Text-light;
+  }
+  i{
+    color: index.$Text-dark;
+  }
 }
+//--------------------------------
+//--------------------------------
 
+
+/*DARK MODE STYLES*/
 body.dark {
- background: index.$Base-dark;
+background-color: index.$Base-dark;
+  .loading{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+.loading-pulse {
+  position: relative;
+  width: (24px / 4);
+  height: 24px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(index.$Grey-light, 0.2);
+  animation: pulseDark 950ms infinite;
+  animation-delay: (950ms / 3);
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    height: (24px / 1.5);
+    width: (24px / 4);
+    background: rgba(index.$Grey-light, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulseDark 950ms infinite;
+  }
+  &:before {
+    left: -(24px / 2);
+  }
+  &:after {
+    left: (24px / 2);
+    animation-delay: (950ms / 1.5);
+  }
+}
+}
+  @keyframes pulseDark {	
+  50% { 
+    background: index.$Text-dark;
+  } 
+}
+// background: index.$Base-dark;
   header{
    background: index.$Grey-dark;
    .dark{
@@ -188,21 +286,13 @@ body.dark {
     border: solid 1.5px index.$Base-light;
     color: index.$Base-light;
   }
-
-  h2{
-    color: index.$Base-light;
-  }
-  h3{
-    color: index.$Base-light;
-  }
-  h4{
-    color: index.$Base-light;
-  }
-  p{
-    color: index.$Text-dark;
-  }
-  i{
-    color: index.$Text-light;
+  .about{
+    .tech-specialities{
+      li{
+        background-color: index.$Grey-dark;
+        color: index.$Text-dark;
+      }
+    }
   }
   footer{
     background-color: index.$Darkest-dark;
@@ -217,5 +307,21 @@ body.dark {
       .rights{
         color: index.$Text-dark;
       }
+    } 
+  //GLOBAL DARK
+  h2{
+   color: index.$Base-light;
+  }
+  h3{
+    color: index.$Base-light;
+  }
+  h4{
+    color: index.$Base-light;
+  }
+  p{
+    color: index.$Text-dark;
+  }
+  i{
+    color: index.$Text-light;
   }
 }

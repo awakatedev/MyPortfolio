@@ -8,13 +8,13 @@ const navRoutes = [
   {
     icon: 'mdi-light:account',
     name: 'About me',
-    path: '/About',
+    path: '/about',
     key: 2,
   },
   {
     icon: 'mdi-light:inbox',
     name: 'Contact',
-    path: '/Contact',
+    path: '/contact',
     key: 3,
   },
 ];
