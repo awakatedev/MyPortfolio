@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import useApiCall from '../hooks/useApiCall';
 import Skeleton from '../loaders/Skeleton';
 import { Icon } from '@iconify/react';
+//require('dotenv').config()
 
 const ProjectCard = () => {
   const [projects, setProjects] = useState({
     loading: true,
     template: false,
   });
+  console.log(process.env.REACT_APP_API_KEY);
 
   const { data } = useApiCall(
     'https://api.github.com/users/awakatedev/repos',
@@ -17,10 +19,11 @@ const ProjectCard = () => {
 
   useEffect(async () => {
     const cards = [];
+    //console.log(process.env);
     object &&
       object.forEach(async (card) => {
         const credentials = btoa(
-          'awakatedev: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',
+          '{process.env.REACT_APP_API_KEY}',
         );
         const responseImg = await fetch(
           `https://api.github.com/repos/awakatedev/${card.name}/contents/.img/img.jpg`,
@@ -46,7 +49,7 @@ const ProjectCard = () => {
           const collabImg = elementCollab.map(({ avatar_url }) => (
             <img src={avatar_url} />
           ));
-          console.log(collabImg);
+         // console.log(collabImg);
           // if (responseImg) {
           const topics = card.topics.map((topic) => <i>{[...topic, '  ']}</i>);
           // console.log(topics)

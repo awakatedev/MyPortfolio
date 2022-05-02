@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/awakatedev/MyPortfolio#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
@@ -41,6 +42,7 @@
     "@iconify/react": "^3.1.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.0",
+    "dotenv-webpack": "^7.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",

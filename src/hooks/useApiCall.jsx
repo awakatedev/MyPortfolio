@@ -6,7 +6,7 @@ const useApiCall = (url, Method) => {
   useEffect(async () => {
     try {
       const credentials = btoa(
-        'awakatedev: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',
+        '{process.env.REACT_APP_API_KEY}',
       );
       const response = await fetch(url, {
         method: Method,
